@@ -375,6 +375,46 @@
             font-weight: 700;
         }
 
+
+        .tabs-nav {
+            margin: 25px 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid #007C27;
+            background: #F0F5CD;
+            color: #00512A;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background: #E8F3B8;
+        }
+
+        .tab-button.active {
+            background: #007C27;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 81, 42, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active-tab {
+            display: block;
+        }
+
+
         @media (max-width: 768px) {
             .filters-grid {
                 grid-template-columns: 1fr;
@@ -398,35 +438,29 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-    
-/* --- Tabs injected --- */
-.tab-nav{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px 0}
-.tab-button{background:#00512A;color:#fff;border:2px solid #007C27;border-radius:10px;padding:10px 14px;
-font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
-.tab-button:hover{background:#007C27;transform:translateY(-2px)}
-.tab-button.active{background:#007C27}
-.tab-content{display:none}
-.tab-content.active{display:block}
-.tab-frame{width:100%;height:90vh;border:none;border-radius:12px;box-shadow:0 2px 8px rgba(0,81,42,.1)}
-@media (max-width:768px){.tab-frame{height:75vh}}
-/* --- end tabs --- */
-</style>
+    </style>
 </head>
 <body>
-
-<div class="tab-nav">
-  <button class="tab-button active" data-target="tabDashboard" onclick="openTab('tabDashboard')">📊 Dashboard</button>
-  <button class="tab-button" data-target="tabRankingImob" onclick="openTab('tabRankingImob')">🏆 Ranking Imob</button>
-  <button class="tab-button" data-target="tabRankingHouse" onclick="openTab('tabRankingHouse')">🏠 Ranking House</button>
-  <button class="tab-button" data-target="tabFunilVendas" onclick="openTab('tabFunilVendas')">📈 Funil de Vendas</button>
-  <button class="tab-button" data-target="tabPerfilCliente" onclick="openTab('tabPerfilCliente')">Perfil de cliente</button>
-</div>
-<div id="tabDashboard" class="tab-content active">
 <div class="container">
+
+<div class="tabs-nav" style="margin-bottom: 25px;">
+    <button class="tab-button active" data-tab="tab-dashboard">Dashboard</button>
+    <button class="tab-button" data-tab="tab-funil">Funil</button>
+    <button class="tab-button" data-tab="tab-perfil-compra">Perfil de Compra</button>
+    <button class="tab-button" data-tab="tab-perfil-cliente">Perfil de Cliente</button>
+
+    <button class="tab-button" data-tab="tab-ranking-house">Ranking House</button>
+    <button class="tab-button" data-tab="tab-ranking-imob">Ranking Imob</button>
+</div>
+
 <div class="header">
 <h1>📊 Análise de Vendas</h1>
 <p>Dashboard Executivo - Análise de Performance e Metas</p>
 </div>
+
+
+<div id="tab-dashboard" class="tab-content active-tab">
+
 <div class="filters-section">
 <div class="filters-grid">
 <div class="filter-group">
@@ -751,7 +785,106 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
 </div>
 </div>
 </div>
+
+<div id="tab-perfil-compra" class="tab-content">
+    <div class="table-section">
+        <h2></h2>
+        <div class="table-container">
+            <iframe src="https://idmdiagonalvicta.github.io/Perfil-de-compra.3/" style="width:100%; height:800px; border:none; border-radius:16px; background:white;"></iframe>
+        </div>
+    </div>
+</div>
+
+
+<div id="tab-perfil-cliente" class="tab-content">
+    <div class="table-section">
+        <h2></h2>
+        <div class="table-container">
+            <iframe src="https://idmdiagonalvicta.github.io/PERFIL-DE-CLIENTE-/" style="width:100%; height:800px; border:none; border-radius:16px; background:white;"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="tab-ranking-house" class="tab-content">
+    <div class="table-section">
+        <h2></h2>
+        <div class="table-container">
+            <iframe src="https://idmdiagonalvicta.github.io/Ranking-House.atual/" style="width:100%; height:800px; border:none; border-radius:16px; background:white;"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="tab-ranking-imob" class="tab-content">
+    <div class="table-section">
+        <h2></h2>
+        <div class="table-container">
+            <iframe src="https://idmdiagonalvicta.github.io/Ranking-Imob-20.10.2025/" style="width:100%; height:800px; border:none; border-radius:16px; background:white;"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="tab-funil" class="tab-content">
+    <div class="table-section">
+        <h2></h2>
+        <div class="table-container">
+            <iframe src="https://idmdiagonalvicta.github.io/Funilatual/" style="width:100%; height:800px; border:none; border-radius:16px; background:white;"></iframe>
+        </div>
+    </div>
+</div>
+
 <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const headerSection = document.querySelector('.header');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-tab');
+
+                    // Remove active from all
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active-tab'));
+
+                    // Activate clicked tab
+                    button.classList.add('active');
+                    const targetTab = document.getElementById(target);
+                    if (targetTab) {
+                        targetTab.classList.add('active-tab');
+                    }
+
+                    // Hide header when not on Dashboard
+                    if (target !== 'tab-dashboard') {
+                        headerSection.style.display = 'none';
+                    } else {
+                        headerSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active-tab'));
+
+                    button.classList.add('active');
+                    const targetTab = document.getElementById(target);
+                    if (targetTab) {
+                        targetTab.classList.add('active-tab');
+                    }
+                });
+            });
+        });
+
         const salesData = [
     {
         "Canal": "VICTA VENDAS",
@@ -2683,7 +2816,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -2741,9 +2874,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
         "Meta VGV": 0.0,
-        "Real VGV": 749837.76,
+        "Real VGV": 1933832.69,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 5
     },
     {
         "Canal": "VICTA VENDAS",
@@ -4855,7 +4988,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -4913,9 +5046,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
         "Meta VGV": 0.0,
-        "Real VGV": 749837.76,
+        "Real VGV": 1933832.69,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 5
     },
     {
         "Canal": "VICTA VENDAS",
@@ -7039,7 +7172,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -7097,9 +7230,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
         "Meta VGV": 0.0,
-        "Real VGV": 749837.76,
+        "Real VGV": 1933832.69,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 5
     },
     {
         "Canal": "VICTA VENDAS",
@@ -9211,7 +9344,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -11189,7 +11322,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3567564.8909999994,
-        "Real VGV": 2776333.98,
+        "Real VGV": 2776333.9800000004,
         "Meta Qtd": 16.0,
         "Real Qtd": 12
     },
@@ -11321,9 +11454,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1335478.6107925142,
-        "Real VGV": 0.0,
+        "Real VGV": 700000.0,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -11333,9 +11466,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 368521.64,
+        "Real VGV": 1448748.2600000002,
         "Meta Qtd": 4.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -11345,9 +11478,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 214000.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -11369,9 +11502,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3569348.6734455,
-        "Real VGV": 0.0,
+        "Real VGV": 235000.00000000003,
         "Meta Qtd": 16.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -11381,9 +11514,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 1374904.222868949,
-        "Real VGV": 0.0,
+        "Real VGV": 2181667.17,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -11393,9 +11526,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 1538305.1521919996,
-        "Real VGV": 0.0,
+        "Real VGV": 1079759.6099999999,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -11405,9 +11538,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 2227449.3356116386,
-        "Real VGV": 0.0,
+        "Real VGV": 452000.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -11417,9 +11550,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 3246484.861620202,
-        "Real VGV": 0.0,
+        "Real VGV": 210900.06,
         "Meta Qtd": 16.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -11428,7 +11561,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Ano": 2025,
         "Linha de Produto": "Vitória",
         "Produto": "VISTA COQUEIRAL",
-        "Meta VGV": 2925000.0,
+        "Meta VGV": 0.0,
         "Real VGV": 1224400.0,
         "Meta Qtd": 8.0,
         "Real Qtd": 3
@@ -13361,7 +13494,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 1457818.1741703541,
-        "Real VGV": 2776333.98,
+        "Real VGV": 2776333.9800000004,
         "Meta Qtd": 7.0,
         "Real Qtd": 12
     },
@@ -13493,9 +13626,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 897079.5877239446,
-        "Real VGV": 0.0,
+        "Real VGV": 700000.0,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -13505,9 +13638,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 1182921.7673163118,
-        "Real VGV": 368521.64,
+        "Real VGV": 1448748.2600000002,
         "Meta Qtd": 3.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -13517,9 +13650,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 695945.1425745974,
-        "Real VGV": 214000.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 3.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -13541,9 +13674,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 1458547.0832574395,
-        "Real VGV": 0.0,
+        "Real VGV": 235000.00000000003,
         "Meta Qtd": 7.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -13553,9 +13686,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 1159628.0930900543,
-        "Real VGV": 0.0,
+        "Real VGV": 2181667.17,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -13565,9 +13698,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 1059701.5486223104,
-        "Real VGV": 0.0,
+        "Real VGV": 1079759.6099999999,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -13577,9 +13710,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 937873.4044680584,
-        "Real VGV": 0.0,
+        "Real VGV": 452000.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -13589,9 +13722,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 1022041.5305100636,
-        "Real VGV": 0.0,
+        "Real VGV": 210900.06,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -14454,7 +14587,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
-        "Meta Qtd": 11.0,
+        "Meta Qtd": 0.0,
         "Real Qtd": 0
     },
     {
@@ -14634,7 +14767,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
-        "Meta Qtd": 7.0,
+        "Meta Qtd": 0.0,
         "Real Qtd": 0
     },
     {
@@ -14814,7 +14947,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
-        "Meta Qtd": 7.0,
+        "Meta Qtd": 0.0,
         "Real Qtd": 0
     },
     {
@@ -14994,7 +15127,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
-        "Meta Qtd": 7.0,
+        "Meta Qtd": 0.0,
         "Real Qtd": 0
     },
     {
@@ -15533,7 +15666,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 1687500.0,
-        "Real VGV": 2776333.98,
+        "Real VGV": 2776333.9800000004,
         "Meta Qtd": 8.0,
         "Real Qtd": 12
     },
@@ -15665,9 +15798,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1282265.4224233583,
-        "Real VGV": 0.0,
+        "Real VGV": 700000.0,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -15677,9 +15810,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 1353042.9670476203,
-        "Real VGV": 368521.64,
+        "Real VGV": 1448748.2600000002,
         "Meta Qtd": 4.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -15689,9 +15822,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 214000.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -15713,9 +15846,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 1687500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 235000.00000000003,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -15725,9 +15858,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 1500651.4313462998,
-        "Real VGV": 0.0,
+        "Real VGV": 2181667.17,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -15737,9 +15870,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 1475335.3785882357,
-        "Real VGV": 0.0,
+        "Real VGV": 1079759.6099999999,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -15749,9 +15882,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 1548537.2117296222,
-        "Real VGV": 0.0,
+        "Real VGV": 452000.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -15761,9 +15894,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 1303937.063414634,
-        "Real VGV": 0.0,
+        "Real VGV": 210900.06,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -15772,7 +15905,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Ano": 2025,
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
-        "Meta VGV": 2925000.0,
+        "Meta VGV": 0.0,
         "Real VGV": 1224400.0,
         "Meta Qtd": 8.0,
         "Real Qtd": 3
@@ -17705,7 +17838,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 2776333.98,
+        "Real VGV": 2776333.9800000004,
         "Meta Qtd": 0.0,
         "Real Qtd": 12
     },
@@ -17837,9 +17970,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1625400.0,
-        "Real VGV": 0.0,
+        "Real VGV": 700000.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17849,9 +17982,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 368521.64,
+        "Real VGV": 1448748.2600000002,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -17861,9 +17994,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 214000.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17885,9 +18018,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 235000.00000000003,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -17897,9 +18030,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 1503000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 2181667.17,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -17909,9 +18042,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1079759.6099999999,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17921,9 +18054,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 452000.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17933,9 +18066,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 210900.06,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -19865,7 +19998,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 8324318.078999999,
-        "Real VGV": 6703099.97,
+        "Real VGV": 6703099.970000001,
         "Meta Qtd": 38.0,
         "Real Qtd": 30
     },
@@ -19949,9 +20082,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 3115718.7904090956,
-        "Real VGV": 0.0,
+        "Real VGV": 689538.0,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -19973,9 +20106,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 355341.68000000005,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -19997,9 +20130,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3116116.758515866,
-        "Real VGV": 0.0,
+        "Real VGV": 337500.0,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -20009,9 +20142,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 376143.38999999996,
+        "Real VGV": 1499709.5899999999,
         "Meta Qtd": 9.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -20021,9 +20154,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 433226.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -20033,9 +20166,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 222426.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -20045,9 +20178,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 8328480.238039499,
-        "Real VGV": 218900.0,
+        "Real VGV": 3819599.84,
         "Meta Qtd": 38.0,
-        "Real Qtd": 1
+        "Real Qtd": 18
     },
     {
         "Canal": "IMOB",
@@ -20057,9 +20190,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 3208109.853360881,
-        "Real VGV": 375000.06,
+        "Real VGV": 1449193.2000000002,
         "Meta Qtd": 9.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -20069,9 +20202,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 3589378.6884479993,
-        "Real VGV": 352490.06,
+        "Real VGV": 1812387.14,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -20081,9 +20214,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 5197381.783093823,
-        "Real VGV": 232000.0,
+        "Real VGV": 2993348.0,
         "Meta Qtd": 27.0,
-        "Real Qtd": 1
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -20093,9 +20226,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 7575131.343780471,
-        "Real VGV": 419800.0,
+        "Real VGV": 2088000.2,
         "Meta Qtd": 38.0,
-        "Real Qtd": 2
+        "Real Qtd": 10
     },
     {
         "Canal": "IMOB",
@@ -20104,10 +20237,10 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Ano": 2025,
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
-        "Meta VGV": 6825000.0,
-        "Real VGV": 1570944.08,
+        "Meta VGV": 0.0,
+        "Real VGV": 5533328.0,
         "Meta Qtd": 18.0,
-        "Real Qtd": 4
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -22037,7 +22170,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3401575.7397308266,
-        "Real VGV": 6703099.97,
+        "Real VGV": 6703099.970000001,
         "Meta Qtd": 15.0,
         "Real Qtd": 30
     },
@@ -22121,9 +22254,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2068483.9151675499,
-        "Real VGV": 0.0,
+        "Real VGV": 689538.0,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -22145,9 +22278,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1496038.0469929997,
-        "Real VGV": 0.0,
+        "Real VGV": 355341.68000000005,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -22169,9 +22302,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 2093185.7046892038,
-        "Real VGV": 0.0,
+        "Real VGV": 337500.0,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -22181,9 +22314,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 2760150.790404727,
-        "Real VGV": 376143.38999999996,
+        "Real VGV": 1499709.5899999999,
         "Meta Qtd": 8.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -22193,9 +22326,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 1623871.9993407272,
-        "Real VGV": 0.0,
+        "Real VGV": 433226.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -22205,9 +22338,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 1680430.9379009695,
-        "Real VGV": 0.0,
+        "Real VGV": 222426.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -22217,9 +22350,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3403276.527600692,
-        "Real VGV": 218900.0,
+        "Real VGV": 3819599.84,
         "Meta Qtd": 15.0,
-        "Real Qtd": 1
+        "Real Qtd": 18
     },
     {
         "Canal": "IMOB",
@@ -22229,9 +22362,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 2705798.8838767936,
-        "Real VGV": 375000.06,
+        "Real VGV": 1449193.2000000002,
         "Meta Qtd": 8.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -22241,9 +22374,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 2472636.946785391,
-        "Real VGV": 352490.06,
+        "Real VGV": 1812387.14,
         "Meta Qtd": 8.0,
-        "Real Qtd": 1
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -22253,9 +22386,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 2188371.277092136,
-        "Real VGV": 232000.0,
+        "Real VGV": 2993348.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -22265,9 +22398,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 2384763.5711901486,
-        "Real VGV": 419800.0,
+        "Real VGV": 2088000.2,
         "Meta Qtd": 12.0,
-        "Real Qtd": 2
+        "Real Qtd": 10
     },
     {
         "Canal": "IMOB",
@@ -22276,10 +22409,10 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Ano": 2025,
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
-        "Meta VGV": 2384763.57119015,
-        "Real VGV": 1570944.08,
+        "Meta VGV": 0.0,
+        "Real VGV": 5533328.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -24209,7 +24342,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3937499.9999999995,
-        "Real VGV": 6703099.97,
+        "Real VGV": 6703099.970000001,
         "Meta Qtd": 18.0,
         "Real Qtd": 30
     },
@@ -24293,9 +24426,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 3114369.360199997,
-        "Real VGV": 0.0,
+        "Real VGV": 689538.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -24317,9 +24450,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1296144.8785185185,
-        "Real VGV": 0.0,
+        "Real VGV": 355341.68000000005,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -24341,9 +24474,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 2991952.6523211696,
-        "Real VGV": 0.0,
+        "Real VGV": 337500.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -24353,9 +24486,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 3157100.2564444477,
-        "Real VGV": 376143.38999999996,
+        "Real VGV": 1499709.5899999999,
         "Meta Qtd": 8.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -24365,9 +24498,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 433226.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -24377,9 +24510,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 606356.3412307695,
-        "Real VGV": 0.0,
+        "Real VGV": 222426.0,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -24389,9 +24522,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 3937499.9999999995,
-        "Real VGV": 218900.0,
+        "Real VGV": 3819599.84,
         "Meta Qtd": 18.0,
-        "Real Qtd": 1
+        "Real Qtd": 18
     },
     {
         "Canal": "IMOB",
@@ -24401,9 +24534,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 3501520.0064747,
-        "Real VGV": 375000.06,
+        "Real VGV": 1449193.2000000002,
         "Meta Qtd": 10.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -24413,9 +24546,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 3442449.216705883,
-        "Real VGV": 352490.06,
+        "Real VGV": 1812387.14,
         "Meta Qtd": 10.0,
-        "Real Qtd": 1
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -24425,9 +24558,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 3613253.494035785,
-        "Real VGV": 232000.0,
+        "Real VGV": 2993348.0,
         "Meta Qtd": 18.0,
-        "Real Qtd": 1
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -24437,9 +24570,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 3042519.814634146,
-        "Real VGV": 419800.0,
+        "Real VGV": 2088000.2,
         "Meta Qtd": 14.0,
-        "Real Qtd": 2
+        "Real Qtd": 10
     },
     {
         "Canal": "IMOB",
@@ -24448,10 +24581,10 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Ano": 2025,
         "Linha de Produto": "Vista",
         "Produto": "VISTA COQUEIRAL",
-        "Meta VGV": 6825000.0,
-        "Real VGV": 1570944.08,
+        "Meta VGV": 0.0,
+        "Real VGV": 5533328.0,
         "Meta Qtd": 18.0,
-        "Real Qtd": 4
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -26381,7 +26514,7 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 6703099.97,
+        "Real VGV": 6703099.970000001,
         "Meta Qtd": 0.0,
         "Real Qtd": 30
     },
@@ -26465,9 +26598,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2994600.0,
-        "Real VGV": 0.0,
+        "Real VGV": 689538.0,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -26489,9 +26622,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3178700.0,
-        "Real VGV": 0.0,
+        "Real VGV": 355341.68000000005,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -26513,9 +26646,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3792599.9999999995,
-        "Real VGV": 0.0,
+        "Real VGV": 337500.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -26525,9 +26658,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 376143.38999999996,
+        "Real VGV": 1499709.5899999999,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -26537,9 +26670,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 433226.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -26549,9 +26682,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 2660000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 222426.0,
         "Meta Qtd": 14.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -26561,9 +26694,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 218900.0,
+        "Real VGV": 3819599.84,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 18
     },
     {
         "Canal": "IMOB",
@@ -26573,9 +26706,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 3507000.0,
-        "Real VGV": 375000.06,
+        "Real VGV": 1449193.2000000002,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -26585,9 +26718,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 352490.06,
+        "Real VGV": 1812387.14,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -26597,9 +26730,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 232000.0,
+        "Real VGV": 2993348.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -26609,9 +26742,9 @@ font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 419800.0,
+        "Real VGV": 2088000.2,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 10
     },
     {
         "Canal": "IMOB",
@@ -27513,58 +27646,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }catch(e){ console.warn("Ano populate warning:", e); }
 });
 </script>
-
-<script>
-// --- Tabs injected ---
-function openTab(tabId){
-  // toggle buttons
-  document.querySelectorAll('.tab-button').forEach(btn=>{
-    if(btn.dataset.target===tabId){ btn.classList.add('active'); }
-    else { btn.classList.remove('active'); }
-  });
-  // toggle contents
-  document.querySelectorAll('.tab-content').forEach(el=>{
-    el.classList.toggle('active', el.id===tabId);
-  });
-}
-// On load: ensure default
-document.addEventListener('DOMContentLoaded', function(){
-  if(!document.querySelector('.tab-button.active')){
-    const firstBtn = document.querySelector('.tab-button');
-    if(firstBtn){ firstBtn.classList.add('active'); }
-  }
-  if(!document.querySelector('.tab-content.active')){
-    const firstTab = document.querySelector('.tab-content');
-    if(firstTab){ firstTab.classList.add('active'); }
-  }
-});
-// --- end tabs ---
-</script>
-
-</div>
-
-<div id="tabRankingHouse" class<div id="tabRankingHouse" class="tab-content">
-      <iframe class="tab-frame" src="https://idmdiagonalvicta.github.io/Ranking-House-20.10.2025/"></iframe>
-    </div>
-    
-<div id="tabFunilVendas" class="tab-content">
-  <iframe class="tab-frame" src="https://idmdiagonalvicta.github.io/FUNIL-VENDA/" title="Funil de Vendas"></iframe>
-</div>
-<div id="tabPerfilCliente" class="tab-content">
-      <iframe class="tab-frame" src="https://idmdiagonalvicta.github.io/PERFIL-DE-CLIENTE-/"></iframe>
-    </div>
-
-    <div id="tabRankingImob" class="tab-content">
-  <div class="container">
-    <div class="header">
-      <h1>🏆 Ranking Imob</h1>
-      <p>Visão integrada do ranking das imobiliárias — fonte externa</p>
-    </div>
-    <div class="projects-section">
-      <h2>Ranking Embutido</h2>
-      <iframe class="tab-frame" src="https://idmdiagonalvicta.github.io/Ranking-Imob-20.10.2025/"></iframe>
-    </div>
-  </div>
-</div>
 </body>
 </html>

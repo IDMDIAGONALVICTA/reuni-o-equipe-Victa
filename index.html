@@ -439,6 +439,7 @@
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <div class="container">
@@ -562,215 +563,7 @@
 </div>
 <div class="analysis-card" style="margin-bottom: 30px;">
 <h2>📊 Tendência Mensal</h2>
-<div id="monthlyTrend"><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>Mês/Ano</th>
-<th>Meta VGV</th>
-<th>Real VGV</th>
-<th>% VGV</th>
-<th>Meta Qtd</th>
-<th>Real Qtd</th>
-<th>% Qtd</th>
-</tr>
-</thead>
-<tbody id="monthly-trend-table-body">
-<tr>
-<td>Janeiro / 2024</td>
-<td class="currency">R$ 28.667.861,25</td>
-<td class="currency">R$ 35.693.341,49</td>
-<td class="percentage-cell" style="color: #007C27;">124.51%</td>
-<td class="number">130</td>
-<td class="number">146</td>
-<td class="percentage-cell" style="color: #007C27;">112.31%</td>
-</tr><tr>
-<td>Fevereiro / 2024</td>
-<td class="currency">R$ 10.389.325,78</td>
-<td class="currency">R$ 30.279.408,90</td>
-<td class="percentage-cell" style="color: #007C27;">291.45%</td>
-<td class="number">42</td>
-<td class="number">126</td>
-<td class="percentage-cell" style="color: #007C27;">300.00%</td>
-</tr><tr>
-<td>Março / 2024</td>
-<td class="currency">R$ 15.625.982,98</td>
-<td class="currency">R$ 49.044.572,75</td>
-<td class="percentage-cell" style="color: #007C27;">313.87%</td>
-<td class="number">63</td>
-<td class="number">188</td>
-<td class="percentage-cell" style="color: #007C27;">298.41%</td>
-</tr><tr>
-<td>Abril / 2024</td>
-<td class="currency">R$ 14.582.063,46</td>
-<td class="currency">R$ 39.240.788,83</td>
-<td class="percentage-cell" style="color: #007C27;">269.10%</td>
-<td class="number">55</td>
-<td class="number">139</td>
-<td class="percentage-cell" style="color: #007C27;">252.73%</td>
-</tr><tr>
-<td>Maio / 2024</td>
-<td class="currency">R$ 17.294.743,78</td>
-<td class="currency">R$ 30.515.448,49</td>
-<td class="percentage-cell" style="color: #007C27;">176.44%</td>
-<td class="number">63</td>
-<td class="number">107</td>
-<td class="percentage-cell" style="color: #007C27;">169.84%</td>
-</tr><tr>
-<td>Junho / 2024</td>
-<td class="currency">R$ 19.703.552,50</td>
-<td class="currency">R$ 67.464.697,07</td>
-<td class="percentage-cell" style="color: #007C27;">342.40%</td>
-<td class="number">71</td>
-<td class="number">242</td>
-<td class="percentage-cell" style="color: #007C27;">340.85%</td>
-</tr><tr>
-<td>Julho / 2024</td>
-<td class="currency">R$ 19.801.490,27</td>
-<td class="currency">R$ 45.175.859,65</td>
-<td class="percentage-cell" style="color: #007C27;">228.14%</td>
-<td class="number">71</td>
-<td class="number">163</td>
-<td class="percentage-cell" style="color: #007C27;">229.58%</td>
-</tr><tr>
-<td>Agosto / 2024</td>
-<td class="currency">R$ 19.900.557,71</td>
-<td class="currency">R$ 40.580.650,80</td>
-<td class="percentage-cell" style="color: #007C27;">203.92%</td>
-<td class="number">71</td>
-<td class="number">144</td>
-<td class="percentage-cell" style="color: #007C27;">202.82%</td>
-</tr><tr>
-<td>Setembro / 2024</td>
-<td class="currency">R$ 18.530.803,04</td>
-<td class="currency">R$ 43.648.522,73</td>
-<td class="percentage-cell" style="color: #007C27;">235.55%</td>
-<td class="number">63</td>
-<td class="number">172</td>
-<td class="percentage-cell" style="color: #007C27;">273.02%</td>
-</tr><tr>
-<td>Outubro / 2024</td>
-<td class="currency">R$ 18.175.000,00</td>
-<td class="currency">R$ 47.697.470,94</td>
-<td class="percentage-cell" style="color: #007C27;">262.43%</td>
-<td class="number">61</td>
-<td class="number">177</td>
-<td class="percentage-cell" style="color: #007C27;">290.16%</td>
-</tr><tr>
-<td>Novembro / 2024</td>
-<td class="currency">R$ 26.728.000,00</td>
-<td class="currency">R$ 2.945.797,44</td>
-<td class="percentage-cell" style="color: #dc3545;">11.02%</td>
-<td class="number">97</td>
-<td class="number">11</td>
-<td class="percentage-cell" style="color: #dc3545;">11.34%</td>
-</tr><tr>
-<td>Dezembro / 2024</td>
-<td class="currency">R$ 35.294.000,00</td>
-<td class="currency">R$ 0,00</td>
-<td class="percentage-cell" style="color: #dc3545;">0.00%</td>
-<td class="number">133</td>
-<td class="number">0</td>
-<td class="percentage-cell" style="color: #dc3545;">0.00%</td>
-</tr><tr>
-<td>Janeiro / 2025</td>
-<td class="currency">R$ 90.956.561,94</td>
-<td class="currency">R$ 107.080.024,47</td>
-<td class="percentage-cell" style="color: #007C27;">117.73%</td>
-<td class="number">284</td>
-<td class="number">438</td>
-<td class="percentage-cell" style="color: #007C27;">154.23%</td>
-</tr><tr>
-<td>Fevereiro / 2025</td>
-<td class="currency">R$ 79.379.686,68</td>
-<td class="currency">R$ 90.838.226,70</td>
-<td class="percentage-cell" style="color: #007C27;">114.44%</td>
-<td class="number">257</td>
-<td class="number">378</td>
-<td class="percentage-cell" style="color: #007C27;">147.08%</td>
-</tr><tr>
-<td>Março / 2025</td>
-<td class="currency">R$ 124.619.424,81</td>
-<td class="currency">R$ 147.133.718,25</td>
-<td class="percentage-cell" style="color: #007C27;">118.07%</td>
-<td class="number">362</td>
-<td class="number">564</td>
-<td class="percentage-cell" style="color: #007C27;">155.80%</td>
-</tr><tr>
-<td>Abril / 2025</td>
-<td class="currency">R$ 107.789.291,59</td>
-<td class="currency">R$ 117.722.366,49</td>
-<td class="percentage-cell" style="color: #007C27;">109.22%</td>
-<td class="number">396</td>
-<td class="number">417</td>
-<td class="percentage-cell" style="color: #007C27;">105.30%</td>
-</tr><tr>
-<td>Maio / 2025</td>
-<td class="currency">R$ 96.193.082,75</td>
-<td class="currency">R$ 91.546.345,47</td>
-<td class="percentage-cell" style="color: #dc3545;">95.17%</td>
-<td class="number">387</td>
-<td class="number">321</td>
-<td class="percentage-cell" style="color: #dc3545;">82.95%</td>
-</tr><tr>
-<td>Junho / 2025</td>
-<td class="currency">R$ 132.086.705,11</td>
-<td class="currency">R$ 202.394.091,21</td>
-<td class="percentage-cell" style="color: #007C27;">153.23%</td>
-<td class="number">377</td>
-<td class="number">726</td>
-<td class="percentage-cell" style="color: #007C27;">192.57%</td>
-</tr><tr>
-<td>Julho / 2025</td>
-<td class="currency">R$ 131.550.071,72</td>
-<td class="currency">R$ 135.527.578,95</td>
-<td class="percentage-cell" style="color: #007C27;">103.02%</td>
-<td class="number">500</td>
-<td class="number">489</td>
-<td class="percentage-cell" style="color: #dc3545;">97.80%</td>
-</tr><tr>
-<td>Agosto / 2025</td>
-<td class="currency">R$ 138.761.003,25</td>
-<td class="currency">R$ 121.741.952,40</td>
-<td class="percentage-cell" style="color: #dc3545;">87.73%</td>
-<td class="number">528</td>
-<td class="number">432</td>
-<td class="percentage-cell" style="color: #dc3545;">81.82%</td>
-</tr><tr>
-<td>Setembro / 2025</td>
-<td class="currency">R$ 129.536.078,79</td>
-<td class="currency">R$ 130.945.568,19</td>
-<td class="percentage-cell" style="color: #007C27;">101.09%</td>
-<td class="number">509</td>
-<td class="number">516</td>
-<td class="percentage-cell" style="color: #007C27;">101.38%</td>
-</tr><tr>
-<td>Outubro / 2025</td>
-<td class="currency">R$ 128.216.693,51</td>
-<td class="currency">R$ 143.092.412,82</td>
-<td class="percentage-cell" style="color: #007C27;">111.60%</td>
-<td class="number">499</td>
-<td class="number">531</td>
-<td class="percentage-cell" style="color: #007C27;">106.41%</td>
-</tr><tr>
-<td>Novembro / 2025</td>
-<td class="currency">R$ 147.185.466,54</td>
-<td class="currency">R$ 19.472.937,84</td>
-<td class="percentage-cell" style="color: #dc3545;">13.23%</td>
-<td class="number">551</td>
-<td class="number">60</td>
-<td class="percentage-cell" style="color: #dc3545;">10.89%</td>
-</tr><tr>
-<td>Dezembro / 2025</td>
-<td class="currency">R$ 122.834.258,14</td>
-<td class="currency">R$ 0,00</td>
-<td class="percentage-cell" style="color: #dc3545;">0.00%</td>
-<td class="number">486</td>
-<td class="number">0</td>
-<td class="percentage-cell" style="color: #dc3545;">0.00%</td>
-</tr></tbody>
-</table>
-</div></div>
+<div id="monthlyTrend"></div>
 </div>
 <div class="projects-section">
 <h2>🏢 Resumo por Empreendimento</h2>
@@ -780,6 +573,14 @@
 </div>
 <div class="table-section">
 <h2>Detalhamento de Vendas</h2>
+<div style="margin-bottom: 20px;">
+<div class="filter-group" style="max-width: 300px;">
+<label for="filterTableChannel">Filtrar por Canal</label>
+<select id="filterTableChannel" onchange="updateTable()">
+<option value="">Todos os canais</option>
+</select>
+</div>
+</div>
 <div class="table-container">
 <div id="tableContainer"></div>
 </div>
@@ -7470,9 +7271,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 332500.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "VICTA VENDAS",
@@ -7830,9 +7631,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 329550.26,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -7866,9 +7667,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 381000.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -7914,9 +7715,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 686188.8,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8094,18 +7895,6 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1337636.8299999998,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 4
-    },
-    {
-        "Canal": "VICTA VENDAS",
-        "Tipo da Meta": "244MM",
-        "Mês": "Abril",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "VISTA COSTEIRA CUMBUCO",
-        "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
         "Real Qtd": 0
@@ -8115,8 +7904,8 @@
         "Tipo da Meta": "244MM",
         "Mês": "Abril",
         "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA EUSEBIO",
+        "Linha de Produto": "Vista",
+        "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
@@ -8128,6 +7917,18 @@
         "Mês": "Abril",
         "Ano": 2024,
         "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA EUSEBIO",
+        "Meta VGV": 0.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "VICTA VENDAS",
+        "Tipo da Meta": "244MM",
+        "Mês": "Abril",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
@@ -8406,9 +8207,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 339568.69999999995,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8466,9 +8267,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 15816637.5,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 49
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8478,9 +8279,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 210039.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8526,9 +8327,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 329611.08,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8574,9 +8375,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 325928.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8646,9 +8447,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 331346.56,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8814,9 +8615,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 676208.11,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8826,9 +8627,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 336753.44,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -8910,7 +8711,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 334663.14,
+        "Real VGV": 330357.33,
         "Meta Qtd": 0.0,
         "Real Qtd": 1
     },
@@ -8994,9 +8795,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 348888.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "VICTA VENDAS",
@@ -9102,9 +8903,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 214783.01,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "VICTA VENDAS",
@@ -9246,9 +9047,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 342728.42,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "VICTA VENDAS",
@@ -9306,9 +9107,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 346740.5,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "VICTA VENDAS",
@@ -9486,9 +9287,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 331882.57,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "VICTA VENDAS",
@@ -16110,7 +15911,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 214938.36899999998,
-        "Real VGV": 354999.0,
+        "Real VGV": 363750.06,
         "Meta Qtd": 1.0,
         "Real Qtd": 1
     },
@@ -16122,9 +15923,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 388920.006,
-        "Real VGV": 1048492.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 1.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16134,9 +15935,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 911400.0,
-        "Real VGV": 209500.00000000003,
+        "Real VGV": 0.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16146,9 +15947,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1422600.0,
-        "Real VGV": 1059997.0,
+        "Real VGV": 1349000.0,
         "Meta Qtd": 4.0,
-        "Real Qtd": 3
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -16158,9 +15959,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 5662500.0,
-        "Real VGV": 226087.36000000002,
+        "Real VGV": 1195399.92,
         "Meta Qtd": 28.0,
-        "Real Qtd": 1
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -16182,9 +15983,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2136974.03,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16194,9 +15995,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 422999.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16206,9 +16007,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 213827.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16290,9 +16091,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 212797.713,
-        "Real VGV": 0.0,
+        "Real VGV": 355789.52,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -16302,9 +16103,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 573900.021,
-        "Real VGV": 0.0,
+        "Real VGV": 314000.0,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -16314,9 +16115,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 634800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 410999.98,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -16326,7 +16127,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 714900.0,
-        "Real VGV": 1050520.0,
+        "Real VGV": 1014000.0,
         "Meta Qtd": 2.0,
         "Real Qtd": 3
     },
@@ -16338,9 +16139,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 980400.0,
-        "Real VGV": 220004.48000000004,
+        "Real VGV": 0.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16350,9 +16151,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 944216.44,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16362,9 +16163,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 352501.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16374,9 +16175,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 1064999.9,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16386,9 +16187,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 426156.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16470,9 +16271,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 299832.741,
-        "Real VGV": 0.0,
+        "Real VGV": 660934.49,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -16482,9 +16283,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1423062.153,
-        "Real VGV": 0.0,
+        "Real VGV": 1574220.26,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 5
     },
     {
         "Canal": "HOUSE",
@@ -16494,9 +16295,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 861600.0,
-        "Real VGV": 0.0,
+        "Real VGV": 189500.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -16506,9 +16307,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 805500.0,
-        "Real VGV": 1402593.22,
+        "Real VGV": 342923.4,
         "Meta Qtd": 2.0,
-        "Real Qtd": 4
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -16518,9 +16319,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1297800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 645999.9600000001,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -16530,9 +16331,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1630699.09,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16542,9 +16343,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2174952.81,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16554,9 +16355,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 1282908.6700000002,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16566,9 +16367,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 1081595.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16590,9 +16391,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1918999.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16650,9 +16451,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 301331.904,
-        "Real VGV": 0.0,
+        "Real VGV": 655313.7,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -16662,9 +16463,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1239487.1339999998,
-        "Real VGV": 665630.0,
+        "Real VGV": 1302100.1,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -16674,9 +16475,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 865800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1191399.99,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -16686,9 +16487,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1315800.0,
-        "Real VGV": 1021749.0,
+        "Real VGV": 1371468.7800000003,
         "Meta Qtd": 4.0,
-        "Real Qtd": 3
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -16698,9 +16499,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 652200.0,
-        "Real VGV": 444063.95999999996,
+        "Real VGV": 1503999.93,
         "Meta Qtd": 3.0,
-        "Real Qtd": 2
+        "Real Qtd": 7
     },
     {
         "Canal": "HOUSE",
@@ -16710,9 +16511,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1361334.02,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16722,9 +16523,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2130084.77,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16734,9 +16535,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 639999.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16746,9 +16547,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 1073292.08,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16770,9 +16571,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1069259.97,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16830,9 +16631,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 302838.564,
-        "Real VGV": 0.0,
+        "Real VGV": 709998.0,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -16842,9 +16643,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1245684.5699999998,
-        "Real VGV": 692415.0,
+        "Real VGV": 1267383.88,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -16854,9 +16655,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 870000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 391000.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -16866,7 +16667,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1322400.0,
-        "Real VGV": 726925.03,
+        "Real VGV": 694770.4299999999,
         "Meta Qtd": 4.0,
         "Real Qtd": 2
     },
@@ -16878,9 +16679,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 655500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1069999.88,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 5
     },
     {
         "Canal": "HOUSE",
@@ -16890,9 +16691,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 792000.0,
-        "Real VGV": 1015420.41,
+        "Real VGV": 2515000.0,
         "Meta Qtd": 2.0,
-        "Real Qtd": 3
+        "Real Qtd": 8
     },
     {
         "Canal": "HOUSE",
@@ -16902,9 +16703,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2112488.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16914,9 +16715,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 222999.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16926,9 +16727,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 1288967.95,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -16950,9 +16751,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2252691.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17010,9 +16811,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 304352.757,
-        "Real VGV": 0.0,
+        "Real VGV": 1029498.1200000001,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17022,9 +16823,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1251912.993,
-        "Real VGV": 688481.99,
+        "Real VGV": 938500.0,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17034,9 +16835,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 874500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 2196853.95,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 11
     },
     {
         "Canal": "HOUSE",
@@ -17046,9 +16847,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1329000.0,
-        "Real VGV": 775984.6,
+        "Real VGV": 995765.31,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17058,9 +16859,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 658800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1566106.74,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 7
     },
     {
         "Canal": "HOUSE",
@@ -17070,9 +16871,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1492500.0,
-        "Real VGV": 697242.03,
+        "Real VGV": 1247000.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 2
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -17082,9 +16883,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1105566.63,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17106,9 +16907,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 1074139.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17130,9 +16931,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 717328.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17154,9 +16955,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 1491273.09,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17166,9 +16967,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 629700.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17190,7 +16991,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 305874.522,
-        "Real VGV": 354999.0,
+        "Real VGV": 354999.02,
         "Meta Qtd": 1.0,
         "Real Qtd": 1
     },
@@ -17202,7 +17003,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1258172.559,
-        "Real VGV": 1371701.96,
+        "Real VGV": 1230996.2999999998,
         "Meta Qtd": 4.0,
         "Real Qtd": 4
     },
@@ -17214,9 +17015,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 878700.0,
-        "Real VGV": 0.0,
+        "Real VGV": 393800.99,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17226,9 +17027,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1335600.0,
-        "Real VGV": 0.0,
+        "Real VGV": 998490.64,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17238,9 +17039,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 662100.0,
-        "Real VGV": 0.0,
+        "Real VGV": 910432.5099999999,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -17250,9 +17051,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1500000.0,
-        "Real VGV": 1329237.0,
+        "Real VGV": 672066.1200000001,
         "Meta Qtd": 5.0,
-        "Real Qtd": 4
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17262,9 +17063,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2593226.29,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17286,9 +17087,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 214074.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17310,9 +17111,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1390978.05,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17322,9 +17123,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 1044643.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17334,9 +17135,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 415296.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17346,9 +17147,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 422151.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17370,9 +17171,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 307403.892,
-        "Real VGV": 0.0,
+        "Real VGV": 709998.0,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17382,9 +17183,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1264463.421,
-        "Real VGV": 1059621.0,
+        "Real VGV": 1902066.5799999998,
         "Meta Qtd": 4.0,
-        "Real Qtd": 3
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -17394,9 +17195,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 883200.0,
-        "Real VGV": 207000.0,
+        "Real VGV": 610000.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17406,9 +17207,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1342200.0,
-        "Real VGV": 762905.99,
+        "Real VGV": 2007880.7399999998,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 6
     },
     {
         "Canal": "HOUSE",
@@ -17418,9 +17219,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 665400.0,
-        "Real VGV": 0.0,
+        "Real VGV": 220004.29,
         "Meta Qtd": 3.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -17430,9 +17231,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1507500.0,
-        "Real VGV": 332493.95,
+        "Real VGV": 629245.48,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17442,9 +17243,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1117241.03,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17466,9 +17267,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 650397.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17478,9 +17279,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 866600.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17490,9 +17291,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 360149.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17502,9 +17303,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 2477044.9899999993,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17514,9 +17315,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 843619.43,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17526,9 +17327,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 210370.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17562,9 +17363,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1270800.0,
-        "Real VGV": 1381439.0,
+        "Real VGV": 918286.7,
         "Meta Qtd": 4.0,
-        "Real Qtd": 4
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17574,9 +17375,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 887700.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1005788.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 5
     },
     {
         "Canal": "HOUSE",
@@ -17586,9 +17387,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1348800.0,
-        "Real VGV": 731500.0,
+        "Real VGV": 2994442.4300000006,
         "Meta Qtd": 4.0,
-        "Real Qtd": 2
+        "Real Qtd": 9
     },
     {
         "Canal": "HOUSE",
@@ -17598,9 +17399,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 133800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 220004.30000000002,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -17610,7 +17411,7 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1609200.0,
-        "Real VGV": 1035492.3199999998,
+        "Real VGV": 982829.75,
         "Meta Qtd": 5.0,
         "Real Qtd": 3
     },
@@ -17658,9 +17459,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 1833599.97,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 8
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17670,9 +17471,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 737218.51,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17682,9 +17483,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 727388.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17694,9 +17495,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 824344.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17706,9 +17507,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 616700.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17730,9 +17531,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 310500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 694999.0,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17742,9 +17543,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1277100.0,
-        "Real VGV": 1063485.0,
+        "Real VGV": 1548827.4,
         "Meta Qtd": 4.0,
-        "Real Qtd": 3
+        "Real Qtd": 5
     },
     {
         "Canal": "HOUSE",
@@ -17754,9 +17555,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 892200.0,
-        "Real VGV": 204999.8,
+        "Real VGV": 409800.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17766,9 +17567,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1355700.0,
-        "Real VGV": 392204.69999999995,
+        "Real VGV": 1361841.2,
         "Meta Qtd": 4.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -17778,9 +17579,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 440008.58999999997,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17790,9 +17591,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1617000.0,
-        "Real VGV": 332999.99,
+        "Real VGV": 1309325.62,
         "Meta Qtd": 5.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -17802,9 +17603,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2891149.21,
+        "Real VGV": 4227890.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 8
+        "Real Qtd": 12
     },
     {
         "Canal": "HOUSE",
@@ -17826,9 +17627,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 430147.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17838,9 +17639,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 2776333.9800000004,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 12
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17850,9 +17651,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2154426.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17862,9 +17663,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 1411501.71,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17874,9 +17675,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 1065254.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17886,9 +17687,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 633700.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -17922,7 +17723,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1283400.0,
-        "Real VGV": 1049999.98,
+        "Real VGV": 987271.59,
         "Meta Qtd": 4.0,
         "Real Qtd": 3
     },
@@ -17934,9 +17735,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 896400.0,
-        "Real VGV": 0.0,
+        "Real VGV": 624499.99,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "HOUSE",
@@ -17946,9 +17747,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1362300.0,
-        "Real VGV": 388942.29000000004,
+        "Real VGV": 684745.8500000001,
         "Meta Qtd": 4.0,
-        "Real Qtd": 1
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -17958,9 +17759,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 220004.28,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -17970,9 +17771,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1625400.0,
-        "Real VGV": 700000.0,
+        "Real VGV": 318643.4,
         "Meta Qtd": 5.0,
-        "Real Qtd": 2
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -17982,9 +17783,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2612554.3800000004,
+        "Real VGV": 3274940.08,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 9
     },
     {
         "Canal": "HOUSE",
@@ -18018,9 +17819,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 235000.00000000003,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 1
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -18030,9 +17831,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 1503000.0,
-        "Real VGV": 2163578.51,
+        "Real VGV": 0.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -18042,9 +17843,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 1079759.6099999999,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -18054,9 +17855,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 1334500.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -18066,9 +17867,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 418800.06,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "HOUSE",
@@ -18114,9 +17915,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 900900.0,
-        "Real VGV": 0.0,
+        "Real VGV": 190788.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -18126,9 +17927,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1369200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1401161.3900000001,
         "Meta Qtd": 4.0,
-        "Real Qtd": 0
+        "Real Qtd": 4
     },
     {
         "Canal": "HOUSE",
@@ -18138,9 +17939,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 0.0,
-        "Real VGV": 0.0,
+        "Real VGV": 220004.3,
         "Meta Qtd": 0.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -18150,9 +17951,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1537800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 339800.01,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "HOUSE",
@@ -18162,9 +17963,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 1485000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 3961128.0,
         "Meta Qtd": 5.0,
-        "Real Qtd": 0
+        "Real Qtd": 11
     },
     {
         "Canal": "HOUSE",
@@ -18174,9 +17975,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 1140000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1505999.99,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 7
     },
     {
         "Canal": "HOUSE",
@@ -18186,9 +17987,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 1145700.0,
-        "Real VGV": 0.0,
+        "Real VGV": 431807.99,
         "Meta Qtd": 6.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "HOUSE",
@@ -24786,9 +24587,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 501522.861,
-        "Real VGV": 0.0,
+        "Real VGV": 352711.17,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -24798,7 +24599,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 907480.014,
-        "Real VGV": 1295723.0,
+        "Real VGV": 1296400.02,
         "Meta Qtd": 3.0,
         "Real Qtd": 4
     },
@@ -24810,9 +24611,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2126600.0,
-        "Real VGV": 823296.99,
+        "Real VGV": 3038158.7000000007,
         "Meta Qtd": 11.0,
-        "Real Qtd": 4
+        "Real Qtd": 16
     },
     {
         "Canal": "IMOB",
@@ -24822,9 +24623,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3319400.0,
-        "Real VGV": 4108144.57,
+        "Real VGV": 3060649.87,
         "Meta Qtd": 10.0,
-        "Real Qtd": 12
+        "Real Qtd": 9
     },
     {
         "Canal": "IMOB",
@@ -24834,9 +24635,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 13212500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 17679409.26000001,
         "Meta Qtd": 66.0,
-        "Real Qtd": 0
+        "Real Qtd": 88
     },
     {
         "Canal": "IMOB",
@@ -24846,9 +24647,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 961379.15,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -24858,9 +24659,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1760312.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -24870,9 +24671,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 16674640.44000001,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 80
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -24882,9 +24683,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 4396967.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 20
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -24966,7 +24767,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 496527.9969999999,
-        "Real VGV": 354999.0,
+        "Real VGV": 353536.19,
         "Meta Qtd": 1.0,
         "Real Qtd": 1
     },
@@ -24978,9 +24779,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 1339100.0489999999,
-        "Real VGV": 1912965.99,
+        "Real VGV": 1599000.07,
         "Meta Qtd": 4.0,
-        "Real Qtd": 6
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -24990,9 +24791,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 1481200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1705000.0,
         "Meta Qtd": 8.0,
-        "Real Qtd": 0
+        "Real Qtd": 9
     },
     {
         "Canal": "IMOB",
@@ -25002,9 +24803,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1668100.0,
-        "Real VGV": 1714142.9,
+        "Real VGV": 1368900.04,
         "Meta Qtd": 5.0,
-        "Real Qtd": 5
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -25014,9 +24815,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 2287600.0,
-        "Real VGV": 222031.97999999998,
+        "Real VGV": 3267999.8300000005,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 15
     },
     {
         "Canal": "IMOB",
@@ -25026,9 +24827,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1658774.01,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25038,9 +24839,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1448762.16,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25050,9 +24851,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 12398999.210000012,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 59
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25062,9 +24863,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 6510335.830000002,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 30
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25146,9 +24947,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 699609.7289999999,
-        "Real VGV": 0.0,
+        "Real VGV": 338507.98,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -25158,7 +24959,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 3320478.357,
-        "Real VGV": 3305456.0,
+        "Real VGV": 3169320.25,
         "Meta Qtd": 11.0,
         "Real Qtd": 10
     },
@@ -25170,9 +24971,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2010399.9999999998,
-        "Real VGV": 405797.0,
+        "Real VGV": 2682000.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 2
+        "Real Qtd": 14
     },
     {
         "Canal": "IMOB",
@@ -25182,9 +24983,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 1879499.9999999998,
-        "Real VGV": 2767652.04,
+        "Real VGV": 2341494.03,
         "Meta Qtd": 6.0,
-        "Real Qtd": 8
+        "Real Qtd": 7
     },
     {
         "Canal": "IMOB",
@@ -25194,9 +24995,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 3028200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 3679998.9000000013,
         "Meta Qtd": 14.0,
-        "Real Qtd": 0
+        "Real Qtd": 17
     },
     {
         "Canal": "IMOB",
@@ -25206,9 +25007,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2322115.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25218,9 +25019,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2124499.6799999997,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25230,9 +25031,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 16305000.410000008,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 76
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25242,9 +25043,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 7554563.770000003,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 35
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25266,9 +25067,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 3371000.02,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 9
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25326,9 +25127,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 703107.776,
-        "Real VGV": 0.0,
+        "Real VGV": 1701102.28,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -25338,9 +25139,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2892136.6459999997,
-        "Real VGV": 4355371.99,
+        "Real VGV": 922359.02,
         "Meta Qtd": 9.0,
-        "Real Qtd": 13
+        "Real Qtd": 3
     },
     {
         "Canal": "IMOB",
@@ -25350,9 +25151,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2020199.9999999998,
-        "Real VGV": 207000.0,
+        "Real VGV": 3581399.9400000004,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 18
     },
     {
         "Canal": "IMOB",
@@ -25362,9 +25163,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3070200.0,
-        "Real VGV": 2106600.96,
+        "Real VGV": 657184.2,
         "Meta Qtd": 9.0,
-        "Real Qtd": 6
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -25374,9 +25175,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1521800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 5170999.810000002,
         "Meta Qtd": 7.0,
-        "Real Qtd": 0
+        "Real Qtd": 24
     },
     {
         "Canal": "IMOB",
@@ -25386,9 +25187,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 3226210.81,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 10
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25398,9 +25199,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 5027750.34,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 14
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25410,9 +25211,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 2334000.32,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 11
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25422,9 +25223,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 9840239.830000006,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 46
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25446,9 +25247,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2400563.9699999997,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25506,9 +25307,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 706623.316,
-        "Real VGV": 0.0,
+        "Real VGV": 685555.26,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -25518,31 +25319,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2906597.3299999996,
-        "Real VGV": 5760308.62,
-        "Meta Qtd": 9.0,
-        "Real Qtd": 17
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Maio",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "Vitória Caucaia",
-        "Meta VGV": 2029999.9999999998,
-        "Real VGV": 0.0,
-        "Meta Qtd": 11.0,
-        "Real Qtd": 0
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Maio",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "Vista Mar Condomínio Clube",
-        "Meta VGV": 3085600.0,
-        "Real VGV": 691880.0,
+        "Real VGV": 655734.32,
         "Meta Qtd": 9.0,
         "Real Qtd": 2
     },
@@ -25552,11 +25329,35 @@
         "Mês": "Maio",
         "Ano": 2024,
         "Linha de Produto": "Vitória",
+        "Produto": "Vitória Caucaia",
+        "Meta VGV": 2029999.9999999998,
+        "Real VGV": 1427499.98,
+        "Meta Qtd": 11.0,
+        "Real Qtd": 7
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Maio",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "Vista Mar Condomínio Clube",
+        "Meta VGV": 3085600.0,
+        "Real VGV": 2382528.04,
+        "Meta Qtd": 9.0,
+        "Real Qtd": 7
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Maio",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1529500.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1749999.98,
         "Meta Qtd": 7.0,
-        "Real Qtd": 0
+        "Real Qtd": 8
     },
     {
         "Canal": "IMOB",
@@ -25566,9 +25367,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 1847999.9999999998,
-        "Real VGV": 2914877.45,
+        "Real VGV": 1879000.0,
         "Meta Qtd": 6.0,
-        "Real Qtd": 9
+        "Real Qtd": 6
     },
     {
         "Canal": "IMOB",
@@ -25578,9 +25379,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1079214.1099999999,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25590,9 +25391,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 867000.31,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25602,9 +25403,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 8386595.730000004,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 39
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25626,9 +25427,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2503662.95,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25686,9 +25487,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 710156.433,
-        "Real VGV": 0.0,
+        "Real VGV": 354999.0,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -25698,7 +25499,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2921130.317,
-        "Real VGV": 1716833.01,
+        "Real VGV": 1443000.0,
         "Meta Qtd": 9.0,
         "Real Qtd": 5
     },
@@ -25710,9 +25511,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2040499.9999999998,
-        "Real VGV": 0.0,
+        "Real VGV": 4082379.8200000003,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 20
     },
     {
         "Canal": "IMOB",
@@ -25722,9 +25523,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3101000.0,
-        "Real VGV": 751917.5999999999,
+        "Real VGV": 2656340.77,
         "Meta Qtd": 9.0,
-        "Real Qtd": 2
+        "Real Qtd": 8
     },
     {
         "Canal": "IMOB",
@@ -25734,9 +25535,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1537200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1557054.7199999997,
         "Meta Qtd": 7.0,
-        "Real Qtd": 0
+        "Real Qtd": 7
     },
     {
         "Canal": "IMOB",
@@ -25746,9 +25547,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3482500.0,
-        "Real VGV": 1931382.53,
+        "Real VGV": 2941800.52,
         "Meta Qtd": 11.0,
-        "Real Qtd": 6
+        "Real Qtd": 9
     },
     {
         "Canal": "IMOB",
@@ -25758,9 +25559,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2165799.5599999996,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 6
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25782,9 +25583,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 11604719.030000007,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 54
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25806,9 +25607,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2951403.9899999998,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 8
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25818,9 +25619,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 14078611.85,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 42
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25830,9 +25631,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 4684668.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 23
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25842,9 +25643,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 4033400.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 19
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25866,9 +25667,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 713707.218,
-        "Real VGV": 0.0,
+        "Real VGV": 1030543.28,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "IMOB",
@@ -25878,31 +25679,7 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2935735.971,
-        "Real VGV": 5183727.0600000005,
-        "Meta Qtd": 9.0,
-        "Real Qtd": 15
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Julho",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "Vitória Caucaia",
-        "Meta VGV": 2050299.9999999998,
-        "Real VGV": 0.0,
-        "Meta Qtd": 11.0,
-        "Real Qtd": 0
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Julho",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "Vista Mar Condomínio Clube",
-        "Meta VGV": 3116400.0,
-        "Real VGV": 2587127.99,
+        "Real VGV": 2182266.9,
         "Meta Qtd": 9.0,
         "Real Qtd": 7
     },
@@ -25912,11 +25689,35 @@
         "Mês": "Julho",
         "Ano": 2024,
         "Linha de Produto": "Vitória",
+        "Produto": "Vitória Caucaia",
+        "Meta VGV": 2050299.9999999998,
+        "Real VGV": 5272084.99,
+        "Meta Qtd": 11.0,
+        "Real Qtd": 26
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Julho",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "Vista Mar Condomínio Clube",
+        "Meta VGV": 3116400.0,
+        "Real VGV": 1360968.1500000001,
+        "Meta Qtd": 9.0,
+        "Real Qtd": 4
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Julho",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1544900.0,
-        "Real VGV": 0.0,
+        "Real VGV": 902321.7499999999,
         "Meta Qtd": 7.0,
-        "Real Qtd": 0
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -25926,9 +25727,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3500000.0,
-        "Real VGV": 1995240.99,
+        "Real VGV": 1663165.3200000003,
         "Meta Qtd": 11.0,
-        "Real Qtd": 6
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -25938,9 +25739,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1509151.9000000001,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25962,9 +25763,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 2385341.92,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 11
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25986,9 +25787,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 3531847.5,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 10
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -25998,9 +25799,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 3219099.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 9
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26010,9 +25811,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 11615276.4,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 56
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26022,9 +25823,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 3025853.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 14
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26058,9 +25859,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2950414.649,
-        "Real VGV": 1731027.99,
+        "Real VGV": 1223391.45,
         "Meta Qtd": 9.0,
-        "Real Qtd": 5
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -26070,9 +25871,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2060799.9999999998,
-        "Real VGV": 197797.0,
+        "Real VGV": 4267797.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 1
+        "Real Qtd": 21
     },
     {
         "Canal": "IMOB",
@@ -26082,9 +25883,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3131800.0,
-        "Real VGV": 381136.0,
+        "Real VGV": 1310193.51,
         "Meta Qtd": 9.0,
-        "Real Qtd": 1
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -26094,9 +25895,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 1552600.0,
-        "Real VGV": 220004.27999999997,
+        "Real VGV": 1364634.9300000002,
         "Meta Qtd": 7.0,
-        "Real Qtd": 1
+        "Real Qtd": 6
     },
     {
         "Canal": "IMOB",
@@ -26106,9 +25907,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3517500.0,
-        "Real VGV": 2272672.74,
+        "Real VGV": 672345.46,
         "Meta Qtd": 11.0,
-        "Real Qtd": 7
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -26118,9 +25919,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2500289.67,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26130,9 +25931,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 432999.98,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26142,9 +25943,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 868471.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 4
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26154,9 +25955,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 2755700.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 13
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26166,9 +25967,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 3880078.5700000003,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 10
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26178,9 +25979,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 7143988.640000002,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 20
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26190,9 +25991,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 5380683.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 26
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26202,9 +26003,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 2915396.05,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 14
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26238,9 +26039,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2965200.0,
-        "Real VGV": 3519742.99,
+        "Real VGV": 2896863.87,
         "Meta Qtd": 9.0,
-        "Real Qtd": 10
+        "Real Qtd": 9
     },
     {
         "Canal": "IMOB",
@@ -26250,9 +26051,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2071299.9999999998,
-        "Real VGV": 0.0,
+        "Real VGV": 4485000.12,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 22
     },
     {
         "Canal": "IMOB",
@@ -26262,9 +26063,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3147200.0,
-        "Real VGV": 356725.0,
+        "Real VGV": 2021647.27,
         "Meta Qtd": 9.0,
-        "Real Qtd": 1
+        "Real Qtd": 6
     },
     {
         "Canal": "IMOB",
@@ -26274,9 +26075,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
         "Meta VGV": 312200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 880017.8800000001,
         "Meta Qtd": 1.0,
-        "Real Qtd": 0
+        "Real Qtd": 4
     },
     {
         "Canal": "IMOB",
@@ -26286,9 +26087,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3754799.9999999995,
-        "Real VGV": 1034436.78,
+        "Real VGV": 1537435.2999999998,
         "Meta Qtd": 11.0,
-        "Real Qtd": 3
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -26298,9 +26099,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 1875589.59,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26310,9 +26111,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 0.0,
-        "Real VGV": 656999.97,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 3
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26322,9 +26123,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 0.0,
-        "Real VGV": 436323.98000000004,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 2
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26334,9 +26135,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
-        "Real VGV": 10592100.120000001,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 48
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26346,9 +26147,9 @@
         "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 2479605.96,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26358,9 +26159,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 2508812.75,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 7
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26370,9 +26171,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 6003501.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 29
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26382,9 +26183,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 5613450.69,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 27
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26418,9 +26219,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2979900.0,
-        "Real VGV": 3922024.5700000003,
+        "Real VGV": 2260161.09,
         "Meta Qtd": 9.0,
-        "Real Qtd": 11
+        "Real Qtd": 7
     },
     {
         "Canal": "IMOB",
@@ -26430,9 +26231,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2081799.9999999998,
-        "Real VGV": 0.0,
+        "Real VGV": 2284500.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 11
     },
     {
         "Canal": "IMOB",
@@ -26442,9 +26243,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3163300.0,
-        "Real VGV": 1125995.34,
+        "Real VGV": 3362541.4400000004,
         "Meta Qtd": 9.0,
-        "Real Qtd": 3
+        "Real Qtd": 10
     },
     {
         "Canal": "IMOB",
@@ -26453,6 +26254,66 @@
         "Ano": 2024,
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Mondubim",
+        "Meta VGV": 0.0,
+        "Real VGV": 222031.99,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 1
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Outubro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
+        "Meta VGV": 3772999.9999999995,
+        "Real VGV": 1280795.96,
+        "Meta Qtd": 11.0,
+        "Real Qtd": 4
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Outubro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
+        "Meta VGV": 0.0,
+        "Real VGV": 12448701.34,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 35
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Outubro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA SENNA",
+        "Meta VGV": 0.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Outubro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA ACÁCIA",
+        "Meta VGV": 0.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Outubro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA ÍRIS",
         "Meta VGV": 0.0,
         "Real VGV": 0.0,
         "Meta Qtd": 0.0,
@@ -26464,71 +26325,11 @@
         "Mês": "Outubro",
         "Ano": 2024,
         "Linha de Produto": "Vista",
-        "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
-        "Meta VGV": 3772999.9999999995,
-        "Real VGV": 680852.14,
-        "Meta Qtd": 11.0,
-        "Real Qtd": 2
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Outubro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
-        "Meta VGV": 0.0,
-        "Real VGV": 2535033.13,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 7
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Outubro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA SENNA",
-        "Meta VGV": 0.0,
-        "Real VGV": 656999.97,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 3
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Outubro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA ACÁCIA",
-        "Meta VGV": 0.0,
-        "Real VGV": 220249.99,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 1
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Outubro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA ÍRIS",
-        "Meta VGV": 0.0,
-        "Real VGV": 6703099.970000001,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 30
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Outubro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
         "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
         "Meta VGV": 0.0,
-        "Real VGV": 3815519.0600000005,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 10
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26538,9 +26339,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 3247072.4400000004,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 9
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26550,9 +26351,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 6609621.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 32
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26562,9 +26363,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 4824799.99,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 23
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26586,9 +26387,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 485099.99999999994,
-        "Real VGV": 0.0,
+        "Real VGV": 709999.02,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 2
     },
     {
         "Canal": "IMOB",
@@ -26598,9 +26399,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 2994600.0,
-        "Real VGV": 2089537.96,
+        "Real VGV": 938419.8899999999,
         "Meta Qtd": 9.0,
-        "Real Qtd": 6
+        "Real Qtd": 3
     },
     {
         "Canal": "IMOB",
@@ -26610,6 +26411,102 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2091599.9999999998,
+        "Real VGV": 415000.0,
+        "Meta Qtd": 11.0,
+        "Real Qtd": 2
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "Vista Mar Condomínio Clube",
+        "Meta VGV": 3178700.0,
+        "Real VGV": 2372937.23,
+        "Meta Qtd": 9.0,
+        "Real Qtd": 7
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "Vitória Mondubim",
+        "Meta VGV": 0.0,
+        "Real VGV": 1120532.54,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 5
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
+        "Meta VGV": 3792599.9999999995,
+        "Real VGV": 1277735.66,
+        "Meta Qtd": 11.0,
+        "Real Qtd": 4
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
+        "Meta VGV": 0.0,
+        "Real VGV": 8521250.120000001,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 24
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA SENNA",
+        "Meta VGV": 0.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA ACÁCIA",
+        "Meta VGV": 2660000.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 14.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vitória",
+        "Produto": "VITÓRIA ÍRIS",
+        "Meta VGV": 0.0,
+        "Real VGV": 0.0,
+        "Meta Qtd": 0.0,
+        "Real Qtd": 0
+    },
+    {
+        "Canal": "IMOB",
+        "Tipo da Meta": "244MM",
+        "Mês": "Novembro",
+        "Ano": 2024,
+        "Linha de Produto": "Vista",
+        "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
+        "Meta VGV": 3507000.0,
         "Real VGV": 0.0,
         "Meta Qtd": 11.0,
         "Real Qtd": 0
@@ -26620,107 +26517,11 @@
         "Mês": "Novembro",
         "Ano": 2024,
         "Linha de Produto": "Vista",
-        "Produto": "Vista Mar Condomínio Clube",
-        "Meta VGV": 3178700.0,
-        "Real VGV": 355341.68000000005,
-        "Meta Qtd": 9.0,
-        "Real Qtd": 1
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "Vitória Mondubim",
-        "Meta VGV": 0.0,
-        "Real VGV": 220004.29000000004,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 1
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
-        "Meta VGV": 3792599.9999999995,
-        "Real VGV": 337500.0,
-        "Meta Qtd": 11.0,
-        "Real Qtd": 1
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
-        "Meta VGV": 0.0,
-        "Real VGV": 2895630.9099999997,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 8
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA SENNA",
-        "Meta VGV": 0.0,
-        "Real VGV": 213999.99,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 1
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA ACÁCIA",
-        "Meta VGV": 2660000.0,
-        "Real VGV": 438499.99,
-        "Meta Qtd": 14.0,
-        "Real Qtd": 2
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vitória",
-        "Produto": "VITÓRIA ÍRIS",
-        "Meta VGV": 0.0,
-        "Real VGV": 6347999.830000001,
-        "Meta Qtd": 0.0,
-        "Real Qtd": 28
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
-        "Produto": "ATLÂNTICO CONDOMINIO CLUBE",
-        "Meta VGV": 3507000.0,
-        "Real VGV": 3021246.85,
-        "Meta Qtd": 11.0,
-        "Real Qtd": 8
-    },
-    {
-        "Canal": "IMOB",
-        "Tipo da Meta": "244MM",
-        "Mês": "Novembro",
-        "Ano": 2024,
-        "Linha de Produto": "Vista",
         "Produto": "VISTA COSTEIRA CUMBUCO",
         "Meta VGV": 0.0,
-        "Real VGV": 1812387.14,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 5
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26730,9 +26531,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA EUSEBIO",
         "Meta VGV": 0.0,
-        "Real VGV": 4044848.0,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 19
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26742,9 +26543,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA MARACANAÚ",
         "Meta VGV": 0.0,
-        "Real VGV": 3822400.2800000003,
+        "Real VGV": 0.0,
         "Meta Qtd": 0.0,
-        "Real Qtd": 18
+        "Real Qtd": 0
     },
     {
         "Canal": "IMOB",
@@ -26766,9 +26567,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Mirante Condominio Clube",
         "Meta VGV": 487899.99999999994,
-        "Real VGV": 0.0,
+        "Real VGV": 354999.0,
         "Meta Qtd": 2.0,
-        "Real Qtd": 0
+        "Real Qtd": 1
     },
     {
         "Canal": "IMOB",
@@ -26778,9 +26579,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Belvedere Condomínio Clube",
         "Meta VGV": 3010000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1598600.3900000001,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 5
     },
     {
         "Canal": "IMOB",
@@ -26790,9 +26591,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "Vitória Caucaia",
         "Meta VGV": 2102100.0,
-        "Real VGV": 0.0,
+        "Real VGV": 603594.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 3
     },
     {
         "Canal": "IMOB",
@@ -26802,9 +26603,9 @@
         "Linha de Produto": "Vista",
         "Produto": "Vista Mar Condomínio Clube",
         "Meta VGV": 3194800.0,
-        "Real VGV": 0.0,
+        "Real VGV": 2690837.9200000004,
         "Meta Qtd": 9.0,
-        "Real Qtd": 0
+        "Real Qtd": 8
     },
     {
         "Canal": "IMOB",
@@ -26826,9 +26627,9 @@
         "Linha de Produto": "Vista",
         "Produto": "VISTA PARQUE CONDOMÍNIO CLUBE",
         "Meta VGV": 3588200.0,
-        "Real VGV": 0.0,
+        "Real VGV": 1888311.7,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 6
     },
     {
         "Canal": "IMOB",
@@ -26838,9 +26639,9 @@
         "Linha de Produto": "Vista",
         "Produto": "JÓQUEI CONDOMÍNIO CLUBE",
         "Meta VGV": 3465000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 5266570.0,
         "Meta Qtd": 11.0,
-        "Real Qtd": 0
+        "Real Qtd": 15
     },
     {
         "Canal": "IMOB",
@@ -26850,9 +26651,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA SENNA",
         "Meta VGV": 2660000.0,
-        "Real VGV": 0.0,
+        "Real VGV": 7718359.810000002,
         "Meta Qtd": 14.0,
-        "Real Qtd": 0
+        "Real Qtd": 37
     },
     {
         "Canal": "IMOB",
@@ -26862,9 +26663,9 @@
         "Linha de Produto": "Vitória",
         "Produto": "VITÓRIA ACÁCIA",
         "Meta VGV": 2673300.0,
-        "Real VGV": 0.0,
+        "Real VGV": 2825436.08,
         "Meta Qtd": 14.0,
-        "Real Qtd": 0
+        "Real Qtd": 13
     },
     {
         "Canal": "IMOB",
@@ -27038,6 +26839,7 @@
 
         let filteredData = [...salesData];
         let selectedMonths = [];
+        let monthlyTrendChart = null;
 
         function parseMonetary(value) {
             if (typeof value === 'number') return value;
@@ -27131,6 +26933,9 @@
             populateSelect('filterGoalType', goalTypes);
             populateSelect('filterProductLine', productLines);
             populateSelect('filterProduct', products);
+            
+            // Popular filtro de canal da tabela de detalhamento
+            populateSelect('filterTableChannel', channels);
 
             ['filterYear', 'filterChannel', 'filterGoalType', 'filterProductLine', 'filterProduct'].forEach(id => {
                 document.getElementById(id).addEventListener('change', () => {
@@ -27340,17 +27145,26 @@
                 channelData[channel].realQtd += realQtd;
             });
 
+            // Calcular total de Real VGV para o share
+            const totalRealVGV = Object.values(channelData).reduce((sum, data) => sum + data.realVGV, 0);
+
             const channelHTML = Object.entries(channelData)
                 .sort(([,a], [,b]) => b.realVGV - a.realVGV)
                 .map(([channel, data]) => {
                     const performanceVGV = data.metaVGV > 0 ? (data.realVGV / data.metaVGV) * 100 : 0;
                     const performanceQtd = data.metaQtd > 0 ? (data.realQtd / data.metaQtd) * 100 : 0;
+                    const share = totalRealVGV > 0 ? (data.realVGV / totalRealVGV) * 100 : 0;
                     
                     return `
                         <div class="channel-item">
                             <div class="item-name">${channel}</div>
                             <div class="item-value">
-                                ${performanceVGV.toFixed(1)}% VGV • ${performanceQtd.toFixed(1)}% Qtd
+                                <div style="font-size: 1.1em; font-weight: 700; color: #00512A; margin-bottom: 5px;">
+                                    Share: ${share.toFixed(1)}%
+                                </div>
+                                <div style="font-size: 0.9em;">
+                                    Performance: ${performanceVGV.toFixed(1)}% VGV • ${performanceQtd.toFixed(1)}% Qtd
+                                </div>
                             </div>
                         </div>
                     `;
@@ -27388,45 +27202,160 @@
 
         function updateMonthlyTrend() {
             const monthData = {};
-            const allMonths = [
-                'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-                'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-            ];
             
-            const years = [...new Set(filteredData.map(row => row['Ano']).filter(v => v))].sort();
-            
-            years.forEach(year => {
-                allMonths.forEach(month => {
-                    const monthYear = `${month}/${year}`;
-                    monthData[monthYear] = 0;
-                });
+            // Agregar dados por mês/ano
+            filteredData.forEach(row => {
+                const mes = row['Mês'];
+                const ano = row['Ano'];
+                const key = `${mes}/${ano}`;
+                
+                if (!monthData[key]) {
+                    monthData[key] = {
+                        mes: mes,
+                        ano: ano,
+                        metaVGV: 0,
+                        realVGV: 0,
+                        metaQtd: 0,
+                        realQtd: 0
+                    };
+                }
+                
+                monthData[key].metaVGV += parseMonetary(row['Meta VGV']);
+                monthData[key].realVGV += parseMonetary(row['Real VGV']);
+                monthData[key].metaQtd += parseInt(row['Meta Qtd']) || 0;
+                monthData[key].realQtd += parseInt(row['Real Qtd']) || 0;
             });
             
-            filteredData.forEach(row => {
-                const monthYear = `${row['Mês']}/${row['Ano']}`;
-                const realVGV = parseMonetary(row['Real VGV']);
-                
-                if (monthData.hasOwnProperty(monthYear)) {
-                    monthData[monthYear] += realVGV;
+            // Ordenar cronologicamente
+            const monthOrder = {
+                'Janeiro': 1, 'Fevereiro': 2, 'Março': 3, 'Abril': 4,
+                'Maio': 5, 'Junho': 6, 'Julho': 7, 'Agosto': 8,
+                'Setembro': 9, 'Outubro': 10, 'Novembro': 11, 'Dezembro': 12
+            };
+            
+            const sortedData = Object.entries(monthData).sort(([keyA, dataA], [keyB, dataB]) => {
+                if (dataA.ano !== dataB.ano) {
+                    return parseInt(dataA.ano) - parseInt(dataB.ano);
+                }
+                return monthOrder[dataA.mes] - monthOrder[dataB.mes];
+            });
+            
+            // Preparar dados para o gráfico
+            const labels = sortedData.map(([key]) => key);
+            const metaVGVData = sortedData.map(([, data]) => data.metaVGV);
+            const realVGVData = sortedData.map(([, data]) => data.realVGV);
+            
+            // Criar HTML com canvas
+            const chartHTML = `
+                <div class="table-container" style="padding: 20px;">
+                    <canvas id="monthlyTrendChart" style="max-height: 400px;"></canvas>
+                </div>
+            `;
+            
+            document.getElementById('monthlyTrend').innerHTML = chartHTML;
+            
+            // Destruir gráfico anterior se existir
+            if (monthlyTrendChart) {
+                monthlyTrendChart.destroy();
+            }
+            
+            // Criar novo gráfico
+            const ctx = document.getElementById('monthlyTrendChart').getContext('2d');
+            monthlyTrendChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Meta VGV',
+                            data: metaVGVData,
+                            backgroundColor: 'rgba(0, 124, 39, 0.6)',
+                            borderColor: '#007C27',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Real VGV',
+                            data: realVGVData,
+                            backgroundColor: 'rgba(0, 81, 42, 0.6)',
+                            borderColor: '#00512A',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                color: '#00512A'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += new Intl.NumberFormat('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL'
+                                    }).format(context.parsed.y);
+                                    return label;
+                                }
+                            },
+                            backgroundColor: 'rgba(0, 81, 42, 0.9)',
+                            titleColor: '#F0F5CD',
+                            bodyColor: '#F0F5CD',
+                            borderColor: '#007C27',
+                            borderWidth: 2
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return new Intl.NumberFormat('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL',
+                                        notation: 'compact',
+                                        compactDisplay: 'short'
+                                    }).format(value);
+                                },
+                                color: '#00512A',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 124, 39, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#00512A',
+                                font: {
+                                    size: 11,
+                                    weight: 'bold'
+                                },
+                                maxRotation: 45,
+                                minRotation: 45
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
                 }
             });
-
-            const sortedMonths = Object.entries(monthData).sort(([a], [b]) => {
-                const [monthA, yearA] = a.split('/');
-                const [monthB, yearB] = b.split('/');
-                
-                if (yearA !== yearB) return parseInt(yearA) - parseInt(yearB);
-                return allMonths.indexOf(monthA) - allMonths.indexOf(monthB);
-            });
-
-            const trendHTML = sortedMonths.map(([month, value]) => `
-                <div class="trend-item">
-                    <div class="item-name">${month}</div>
-                    <div class="item-value">${formatCurrency(value)}</div>
-                </div>
-            `).join('');
-
-            document.getElementById('monthlyTrend').innerHTML = trendHTML;
         }
 
         function updateProjectsSummary() {
@@ -27500,6 +27429,12 @@
         }
 
         function updateTable() {
+            // Aplicar filtro de canal específico da tabela
+            const tableChannelFilter = document.getElementById('filterTableChannel').value;
+            const tableFilteredData = tableChannelFilter 
+                ? filteredData.filter(row => row['Canal'] === tableChannelFilter)
+                : filteredData;
+
             const tableHTML = `
                 <table>
                     <thead>
@@ -27521,7 +27456,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        ${filteredData.map(row => {
+                        ${tableFilteredData.map(row => {
                             const metaVGV = parseMonetary(row['Meta VGV']);
                             const realVGV = parseMonetary(row['Real VGV']);
                             const metaQtd = parseInt(row['Meta Qtd']) || 0;
@@ -27561,7 +27496,7 @@
         function clearAllFilters() {
             clearMonthSelection();
             
-            ['filterYear', 'filterChannel', 'filterGoalType', 'filterProductLine', 'filterProduct'].forEach(id => {
+            ['filterYear', 'filterChannel', 'filterGoalType', 'filterProductLine', 'filterProduct', 'filterTableChannel'].forEach(id => {
                 document.getElementById(id).value = '';
             });
             applyFilters();
@@ -27625,7 +27560,7 @@ document.addEventListener('DOMContentLoaded', function(){
             // preserve first option if it's a prompt like "Todos"
             const keepFirst = sel.options.length ? sel.options[0].textContent.trim() : null;
             sel.innerHTML = "";
-            if (keepFirst and keepFirst) {
+            if (keepFirst) {
                 const optAll = document.createElement('option');
                 optAll.value = "Todos";
                 optAll.textContent = keepFirst.match(/todos/i) ? keepFirst : "Todos";
